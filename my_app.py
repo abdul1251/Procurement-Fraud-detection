@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+from joblib import load
 import numpy as np
 from datetime import datetime
 
@@ -37,7 +37,7 @@ def days_xtract(input8,input9,input10):
 
 def value_predictor(to_predict_list):
 	to_predict = np.array(to_predict_list).reshape(1,13)
-	loaded_model = pickle.load(open("model_pkl.pkl", "rb"))
+	loaded_model = load("filename.joblib")
 	result = loaded_model.predict(to_predict)
 	return result[0]
 
