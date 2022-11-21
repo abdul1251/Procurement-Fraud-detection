@@ -37,7 +37,8 @@ def days_xtract(input8,input9,input10):
 
 def value_predictor(to_predict_list):
 	to_predict = np.array(to_predict_list).reshape(1,13)
-	loaded_model = pickle.load(open("model_pkl.pkl",'rb'))
+	#loaded_model = pickle.load(open("model_pkl.pkl",'rb'))
+	loaded_model = pickle.load(open("random_forest_model.pkl",'rb'))
 	result = loaded_model.predict(to_predict)
 	return result[0]
 
