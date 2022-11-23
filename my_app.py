@@ -69,15 +69,15 @@ def main():
     input3 = st.selectbox('Supplier Name',supplier)
     input4 = st.selectbox('Product Category',category)
     input5 = st.selectbox('sub Category',sub_cat)
-    input6 = st.number_input('Quantity',1,200)
+    input6 = st.number_input('Quantity',1,2000)
     input7 = st.selectbox('Procurement Process',procure_process)
     input8 = st.date_input('Tender Invitation Date')
     input9 = st.date_input('Deadline for Submissions')
     input10 = st.number_input('Number of Bids Received',0,1000)
     input14 = st.number_input('Unit_price',1,10000)
-    input11 = st.number_input('Buying Price',1,100000)
+    input11 = st.number_input('Buying Price',1,10000)
     input12 = st.date_input('Purchase Date')
-    input13 = st.number_input('Total Buying Price',1,10000)
+    input13 = st.number_input('Total Buying Price',1,100000)
 
 
     if st.button('Predict'):
