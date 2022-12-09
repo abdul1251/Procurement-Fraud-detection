@@ -85,9 +85,9 @@ def main():
         days_to_submit,diff = days_xtract(input8,input9,input12)
         to_predict_list = [ap_of,re_of,sup,cat,sub,input6,Pro_pro,input10,input14,input11,input13,days_to_submit,diff]
         result = value_predictor(to_predict_list)
-        if result==0:
+        if int(result)==0:
             result = 'Fraud Not Happened'
-        elif result == 1:
+        elif int(result) == 1:
             result = 'Fraud Happened'
         st.success(result)
 
